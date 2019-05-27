@@ -2,19 +2,31 @@ package ba.unsa.rs.tutorijal10;
 
 import java.io.Serializable;
 
-public class Drzava implements Serializable {
+public class Drzava implements Serializable
+{
 
     String naziv;
     int brojStanovnika;
     double povrsina;
+    Grad glavniGrad;
+
+    public Grad getGlavniGrad() {
+        return glavniGrad;
+    }
+
+    public void setGlavniGrad(Grad glavniGrad) {
+        this.glavniGrad = glavniGrad;
+    }
 
     public Drzava() {
     }
 
-    public Drzava(String naziv, int brojStanovnika, double povrsina, String jedinicaZaPovrsinu) {
+
+    public Drzava(String naziv, int brojStanovnika, double povrsina, Grad glavniGrad, String jedinicaZaPovrsinu) {
         this.naziv = naziv;
         this.brojStanovnika = brojStanovnika;
         this.povrsina = povrsina;
+        this.glavniGrad = glavniGrad;
         this.jedinicaZaPovrsinu = jedinicaZaPovrsinu;
     }
 
